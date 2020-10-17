@@ -1,6 +1,6 @@
 # React Superheroes
 
- An app to search for superheroes and save them by building a list learnt from Coding Ninja's Boot Camp on How to Build a SuperMan App.   
+ An app to search for superheroes by building a list as learnt from Coding Ninja's Boot Camp on How to Build a SuperMan App.   
 
 ### `npm start`
 
