@@ -8,8 +8,8 @@ function App() {
   const [searchText, setSearchText] = useState('');
   const [superheroData, setSuperheroData] = useState([]);
   
-  async function searchSuperHeros(){
-    let response = await fetch(`https://www.superheroapi.com/api.php/3379905258763762/search/${searchText}`)
+  async function searchSuperHeros(searchTerm){
+    let response = await fetch(`https://www.superheroapi.com/api.php/3379905258763762/search/${searchTerm}`)
     const data = await response.json();
     setSuperheroData(data.results);
   }
@@ -20,8 +20,9 @@ function App() {
     setSearchText(searchTerm);
     if(!searchTerm.length)
       setSuperheroData([]);
+      
     if(searchTerm.length > 3) {
-      searchSuperHeros();
+      searchSuperHeros(searchTerm);
     } 
   }
 
